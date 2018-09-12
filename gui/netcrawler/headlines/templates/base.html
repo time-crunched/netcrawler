@@ -1,0 +1,44 @@
+{% load static %}
+
+<body>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      padding: 10px;
+      grid-column-gap: 50px;
+      grid-row-gap: 50px;
+    }
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+    }
+    </style>
+    <title>NetCrawler</title>
+  </head>
+
+	<div class="page-header">
+		<h1><a href={% url 'headlines:index' %}>NetCrawler toolbox</a></h1>
+		<p>Version: 1.0</p>
+	</div>
+
+	<div class="content-container">
+		{% block content %}
+		{% endblock %}
+	</div>
+
+</body>
