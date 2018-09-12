@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="tool-heading">
+	<h1>Overview</h1>
+</div>
+
+<div class="grid-container">
+	{% for data_dict in data_list %}
+	<div class="grid-item">
+		<h2>{{ data_dict.title }}</h2>
+		<p>updated: {{ data_dict.datetime }}</p>
+		<p>url: {{ data_dict.url }}</p>
+		{% for list in data_dict.headlines %}
+			<h4><a href="{{ list.1 }}">{{ list.0 }}</a>
+			</h4>
+			<h4>Polarity: {{ list.2 }}
+		{% endfor %}
+	</div>
+	{% endfor %}
+</div>
+
+{% endblock %}

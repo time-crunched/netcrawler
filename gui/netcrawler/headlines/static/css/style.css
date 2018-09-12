@@ -1,0 +1,17 @@
+body {
+    padding-left: 50px;
+}
+
+.page-header {
+    margin-top: 0;
+}
+
+.content-container {
+  margin-left: 100px;
+  margin-right: 200px;
+}
+
+
+.tool-heading {
+  margin-bottom: 30px;
+}
