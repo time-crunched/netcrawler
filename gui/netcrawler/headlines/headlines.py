@@ -1,4 +1,5 @@
 import os
+import time
 import datetime
 import requests
 import re
@@ -32,6 +33,8 @@ class Headlines(object):
 
         #Store date and time for later use
         self.data_dict['datetime'] = self.datetime
+
+        self.data_dict['datetime_plot'] = int(time.mktime(datetime.datetime.now().timetuple()) * 1000)
 
     def Scrape(self):
         #Define list for collecting headlines:
