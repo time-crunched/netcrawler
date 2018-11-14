@@ -19,6 +19,7 @@ class SentimentAnalyzer(object):
     def analyze(self):
         self.ana_obj = TextBlob(str(self.en_text))
         self.polarity = self.ana_obj.sentiment.polarity
+        self.polarity = '{0:.3g}'.format(self.polarity)
         return self.polarity
 
 if __name__ == '__main__':
